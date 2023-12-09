@@ -1,13 +1,13 @@
 #---------------------------------------------anime-------------------------------------------
 
-anime_character=0
+anime_character=1
 
 if [ ${anime_character} -eq 1 ]
 then
-  fused_model="experiments/composed_edlora/anythingv4/hina+kario+tezuka_anythingv4/combined_model_base"
-  expdir="hina+kario+tezuka_anythingv4"
+  fused_model="/content/Mix-of-Show/hina+kario+tezuka_anythingv4/combined_model_base"
+  expdir="/content/Mix-of-Show/hina+kario+tezuka_anythingv4"
 
-  keypose_condition='datasets/validation_spatial_condition/multi-characters/anime_pose_2x/hina_tezuka_kario_2x.png'
+  keypose_condition='/content/Mix-of-Show/datasets/validation_spatial_condition/multi-characters/anime_pose_2x/hina_tezuka_kario_2x.png'
   keypose_adaptor_weight=1.0
   sketch_condition=''
   sketch_adaptor_weight=1.0
@@ -45,7 +45,7 @@ fi
 
 #---------------------------------------------real-------------------------------------------
 
-real_character=1
+real_character=0
 
 if [ ${real_character} -eq 1 ]
 then
